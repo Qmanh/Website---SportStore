@@ -78,7 +78,7 @@ Delete Product: http://localhost:8080/Admin/delete/{id}(id=${product.id}) -> met
 
 Edit Product: http://localhost:8080/Admin/products/edit/{id}(id=${product.id}) -> method Get
 
-#Explaination application
+# Explaination application
 
 The website is very friendly for people to use. People can see a lot of football shoes follow to list. It shows price and detail about product to help people to choose for themself. You can search product to follow your favorite such as color,brand. Then you can order and checkout. Especially, needn't to create account.
 
