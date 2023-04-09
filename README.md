@@ -4,15 +4,15 @@
 
 ![image](https://user-images.githubusercontent.com/87469606/230778805-19b5d88b-7a79-406c-ae2b-ed60b40f67f4.png)
 
-#Flow Chat
+# Flow Chat
 
 ![image](https://user-images.githubusercontent.com/87469606/230780629-f3b0f001-76d8-4290-9273-9596b44de7b3.png)
 
-#Installation
+# Installation
 
 Can use Intellij or Esclipse or Spring Tool
 
-#Application UI
+# Application UI
 
 HomePage
 
@@ -46,7 +46,7 @@ Admin show list bill order handled
 
 ![image](https://user-images.githubusercontent.com/87469606/230780951-fc872e55-b2d7-4d05-b278-cca53ef51b10.png)
 
-#HTTP Headers
+# HTTP Headers
 
 Homepage: localhost:8080
 
@@ -68,7 +68,8 @@ Thank you: http://localhost:8080/product/order
 
 Login Page: http://localhost:8080/login -- Only use when they have account "admin" and password "admin123". If don't have , no to connect Admin Home
 
-#Admin
+# Admin
+
 Admin home: http://localhost:8080/Admin/home 
 
 Admin add product and show list product: httpL//localhost:8080/Admin/saveProduct -> Post
@@ -80,9 +81,10 @@ Edit Product: http://localhost:8080/Admin/products/edit/{id}(id=${product.id}) -
 #Explaination application
 
 The website is very friendly for people to use. People can see a lot of football shoes follow to list. It shows price and detail about product to help people to choose for themself. You can search product to follow your favorite such as color,brand. Then you can order and checkout. Especially, needn't to create account.
+
 Login page only for admin, who want to manage the application. It'll prevent if you must not be a manager. It not remove other page, it still stay in login page. Admin can add,edit,delete product , they can hanlde bill order to accept or deny, who can see list order was handled.
 
-#Code Structure
+# Code Structure
 
 5 package and 1 folder resource:
 - package controller: HomeController
