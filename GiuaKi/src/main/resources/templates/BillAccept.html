@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đơn đặt hàng</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-3">
+  <h1>Đơn đặt hàng đã duyệt</h1>
+  <hr>
+  <table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tên khách hàng</th>
+      <th>Địa chỉ</th>
+      <th>Mã sản phẩm</th>
+      <th>Tên sản phẩm</th>
+      <th>Thương hiệu</th>
+      <th>Màu sắc</th>
+      <th>Size giày</th>
+      <th>Số lượng</th>
+      <th>Giá tiền</th>
+      <th>Ngày đặt hàng</th>
+      <th>Trạng thái</th>
+     
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="bill : ${bills}">
+      <td th:text="${bill.id}"></td>
+      <td th:text="${bill.NameCustomer}"></td>
+      <td th:text="${bill.address}"></td>
+      <td th:text="${bill.idProduct}"></td>
+      <td th:text="${bill.productName}"></td>
+      <td th:text="${bill.brand}"></td>
+      <td th:text="${bill.color}"></td>
+      <td th:text="${bill.size}"></td>
+      <td th:text="${bill.quantity}"></td>
+      <td th:text="${bill.price}"></td>
+      <td th:text="${bill.orderDate}"></td>
+      <td th:text="${bill.status}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="text-center">
+    <a th:href="@{/Admin/home}" class="btn btn-success">Trở lại</a>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+</body>
+</html>
+
+
+
+

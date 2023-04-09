@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Chỉnh sửa sản phẩm</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #f8f8f8">
+
+	<div class="container-fluid p-5">
+		<div class="row mb-5">
+			<div class="col-md-6">
+				<h3>Chỉnh sửa sản phẩm</h3>
+			</div>
+			<div class="col-md-6 text-right">
+				Hello <span class="text-danger">Admin</span> | <a th:href="@{/}">Logout</a>
+			</div>
+		</div>
+		<div class="row rounded border p-3">
+			<div class="col-md-4" >
+
+				<h4 class="text-success">Thông tin sản phẩm</h4>
+				<form th:action="@{/Admin/edit/{id}(id=${product.id})}" th:object = "${product}" method="Post" enctype="multipart/form-data" >
+				<div class="form-group">
+					
+					<label for="product-name">Product Name</label>
+					<input name="name"
+						class="form-control" type="text" th:field = "*{name}" placeholder="Nhập tên sản phẩm"
+						id="product-name"  />
+				</div>
+				<div class="form-group">
+					<label for="price">Price</label> <input name="price"
+						class="form-control" type="number" th:field = "*{price}" placeholder="Nhập giá bán"
+						id="price" />
+				</div>
+
+                <div class="form-group">
+					<label for="brand">Brand</label> <input name="brand"
+						class="form-control" type="text" th:field = "*{brand}" placeholder="Thương hiệu"
+						id="brand" >
+				</div>
+
+                <div class="form-group">
+					<label for="color">Color</label> <input name="color"
+						class="form-control" type="text" th:field = "*{color}" placeholder="màu sắc"
+						id="color" >
+				</div>
+					<div>
+						<img alt="" th:src="${'/image/'+product.image}" style="width: 250px;height: 250px;" />
+					</div>
+
+				<div class="form-group">
+					<button class="btn btn-success mr-2">Lưu lại</button>
+					<a th:href="@{/Admin/home}" class="btn btn-primary mr-2">Trở lại </a>
+
+				</div>
+
+				</form>
+
+			</div>
+
+
+		</div>
+	</div>
+	
+	<script>
+		// Add the following code if you want the name of the file appear on select
+		$(".custom-file-input").on(
+				"change",
+				function() {
+					var fileName = $(this).val().split("\\").pop();
+					$(this).siblings(".custom-file-label").addClass("selected")
+							.html(fileName);
+				});
+
+	</script>
+</body>
+</html>
