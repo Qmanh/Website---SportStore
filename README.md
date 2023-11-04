@@ -50,19 +50,19 @@ Admin show list bill order handled
 
 Homepage: localhost:8080
 
-View List Product: http://localhost:8080/product/listProduct -> Get
+View List Product: http://localhost:8080/product/listProduct 
 
-Search Product: http://localhost:8080/product/search?keyword= -> Get
+Search Product: http://localhost:8080/product/search?keyword= 
 
-Filter : http://localhost:8080/product/filter?brand=&color=&price= -> Get
+Filter : http://localhost:8080/product/filter?brand=&color=&price= 
 
-Add product to Cart: http://localhost:8080/product/add/{id} -> Get
+Add product to Cart: http://localhost:8080/product/add/{id} 
 
-Detail product : http://localhost:8080/product/details/{id} -> Get
+Detail product : http://localhost:8080/product/details/{id} 
 
 View Cart: http://localhost:8080/product/shopping-cart 
 
-Checkout product: http://localhost:8080/product/update -> Post
+Checkout product: http://localhost:8080/product/update 
 
 Thank you: http://localhost:8080/product/order
 
@@ -72,11 +72,11 @@ Login Page: http://localhost:8080/login -- Only use when they have account "admi
 
 Admin home: http://localhost:8080/Admin/home 
 
-Admin add product and show list product: httpL//localhost:8080/Admin/saveProduct -> Post
+Admin add product and show list product: httpL//localhost:8080/Admin/saveProduct 
 
-Delete Product: http://localhost:8080/Admin/delete/{id}(id=${product.id}) -> method Post
+Delete Product: http://localhost:8080/Admin/delete/{id}(id=${product.id}) 
 
-Edit Product: http://localhost:8080/Admin/products/edit/{id}(id=${product.id}) -> method Get
+Edit Product: http://localhost:8080/Admin/products/edit/{id}(id=${product.id}) 
 
 # Explaination application
 
